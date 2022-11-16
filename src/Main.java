@@ -32,24 +32,24 @@ public class Main {
         symptomID.put("Aches", 8);
         symptomID.put("Low Appetite", 9);
         symptomID.put("Rash", 10);
-        symptomID.put("Swollen lymph nodes", 2);
-        symptomID.put("Swollen tonsils", 3);
-        symptomID.put("Cough", 1);
-        symptomID.put("Chills", 2);
-        symptomID.put("Shortness of breath", 3);
+        symptomID.put("Swollen lymph nodes", 12);
+        symptomID.put("Swollen tonsils", 13);
+        symptomID.put("Cough", 14);
+        symptomID.put("Chills", 15);
+        symptomID.put("Shortness of breath", 16);
 
-
+// creating array
+        int[] diseaseIDArray= new int [16];
         // see if map contains symptom name
 
         //Error here, come back, for some reason it is always true
 
         boolean hasName1 = symptomID.containsKey("Loose Stool");
         if (hasName1 = true) {
-            System.out.println("hi!");
-        }
-        else{
-            System.out.println("bye!");
-            }
+            int id = symptomID.get("Loose Stool");
+            System.out.println(id);
+
+
 
         boolean hasName2 = symptomID.containsKey("Vomiting");
         if (hasName2 = true) {
@@ -109,8 +109,7 @@ public class Main {
             System.out.println("hi!");
         }
 
-        // get value for a specific key
-        int id = symptomID.get("Chills");
+
 
     }
 }
