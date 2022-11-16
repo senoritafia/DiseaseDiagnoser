@@ -20,7 +20,6 @@ public class Main {
             }
         }
 */
-
         HashMap<String, Integer> symptomID = new HashMap<>();
         // figure out how to make a hashmap with boolean values.
         symptomID.put("Loose Stool", 1);
@@ -41,10 +40,75 @@ public class Main {
 
 
         // see if map contains symptom name
-        boolean hasName = symptomID.containsKey("Chills");
-        if (hasName = true) {
-            add
+
+        //Error here, come back, for some reason it is always true
+
+        boolean hasName1 = symptomID.containsKey("Loose Stool");
+        if (hasName1 = true) {
+            System.out.println("hi!");
         }
+        else{
+            System.out.println("bye!");
+            }
+
+        boolean hasName2 = symptomID.containsKey("Vomiting");
+        if (hasName2 = true) {
+            System.out.println("hello!");
+        }
+        boolean hasName3 = symptomID.containsKey("Abdominal Cramps");
+        if (hasName3 = true) {
+            System.out.println("hello2!");
+        }
+        boolean hasName4 = symptomID.containsKey("Nausea");
+        if (hasName4 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName5 = symptomID.containsKey("Fever");
+        if (hasName5 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName6 = symptomID.containsKey("Fatigue");
+        if (hasName6 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName7 = symptomID.containsKey("Sore Throat");
+        if (hasName7 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName8 = symptomID.containsKey("Aches");
+        if (hasName8 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName9 = symptomID.containsKey("Low Appetite");
+        if (hasName9 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName10 = symptomID.containsKey("Rash");
+        if (hasName10 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName11 = symptomID.containsKey("Swollen Lymph Nodes");
+        if (hasName11 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName12 = symptomID.containsKey("Swollen Tonsils");
+        if (hasName12 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName13 = symptomID.containsKey("Cough");
+        if (hasName13 = true) {
+            System.out.println("hi!");
+        }
+        boolean hasName14 = symptomID.containsKey("Chills");
+        if (hasName14 = true) {
+            System.out.println("hi!");
+        }
+
+        boolean hasName15 = symptomID.containsKey("Shortness of Breath");
+        if (hasName15 = true) {
+            System.out.println("hi!");
+        }
+
         // get value for a specific key
         int id = symptomID.get("Chills");
 
