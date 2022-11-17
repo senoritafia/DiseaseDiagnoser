@@ -46,8 +46,21 @@ public class Main {
 
         //Error here, come back, for some reason it is always true
 
-        boolean hasName1 = symptomID.containsKey("Loose Stool");
-        if (hasName1 = true) {
+
+        //System.out.println(Arrays.toString(diseaseIDArray));
+        // boolean hasName1 = symptomID.containsKey("Loose Stool");
+
+      /*  for (String symptom : symptomList) {
+            symptom = symptom.toLowerCase();
+            if (symptomID.containsKey(symptom)) {
+                int id = symptomID.get(symptom);
+                System.out.println(id);
+                diseaseIDList.add(id);
+            }
+        }
+       */
+        boolean hasName1 = symptomList.contains("Loose Stool");
+        if (hasName1 == true) {
             int id = symptomID.get("Loose Stool");
             System.out.println(id);
             diseaseIDList.add(id);
