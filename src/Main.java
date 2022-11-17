@@ -22,21 +22,21 @@ public class Main {
 */
         HashMap<String, Integer> symptomID = new HashMap<>();
         // figure out how to make a hashmap with boolean values.
-        symptomID.put("Loose Stool", 1);
-        symptomID.put("Vomiting", 2);
-        symptomID.put("Abdominal Cramps", 3);
-        symptomID.put("Nausea", 4);
-        symptomID.put("Fever", 5);
-        symptomID.put("Fatigue", 6);
-        symptomID.put("Sore Throat", 7);
-        symptomID.put("Aches", 8);
-        symptomID.put("Low Appetite", 9);
-        symptomID.put("Rash", 10);
-        symptomID.put("Swollen Lymph Nodes", 11);
-        symptomID.put("Swollen Tonsils", 12);
-        symptomID.put("Cough", 13);
-        symptomID.put("Chills", 14);
-        symptomID.put("Shortness Of Breath", 15);
+        symptomID.put("loose stool", 1);
+        symptomID.put("vomiting", 2);
+        symptomID.put("abdominal cramps", 3);
+        symptomID.put("nausea", 4);
+        symptomID.put("fever", 5);
+        symptomID.put("fatigue", 6);
+        symptomID.put("sore throat", 7);
+        symptomID.put("aches", 8);
+        symptomID.put("low appetite", 9);
+        symptomID.put("rash", 10);
+        symptomID.put("swollen lymph nodes", 11);
+        symptomID.put("swollen tonsils", 12);
+        symptomID.put("cough", 13);
+        symptomID.put("chills", 14);
+        symptomID.put("shortness of breath", 15);
 
         // creating array
         List<Integer> diseaseIDList = new ArrayList<>();
@@ -139,7 +139,7 @@ public class Main {
         }
 
         System.out.println(diseaseIDList);
-/*
+
         boolean hasName1 = symptomID.containsKey("Loose Stool");
         if (hasName1 = true) {
             System.out.println("hello!");
@@ -202,7 +202,7 @@ public class Main {
             System.out.println("hi!");
         }
 
-*/
+
 
 
     }
