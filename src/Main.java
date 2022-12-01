@@ -49,16 +49,7 @@ public class Main {
 
         //System.out.println(Arrays.toString(diseaseIDArray));
         // boolean hasName1 = symptomID.containsKey("Loose Stool");
-
-      /*  for (String symptom : symptomList) {
-            symptom = symptom.toLowerCase();
-            if (symptomID.containsKey(symptom)) {
-                int id = symptomID.get(symptom);
-                System.out.println(id);
-                diseaseIDList.add(id);
-            }
-        }
-       */
+ /*
         boolean hasName1 = symptomList.contains("Loose Stool");
         if (hasName1 == true) {
             int id = symptomID.get("Loose Stool");
@@ -151,7 +142,7 @@ public class Main {
             diseaseIDList.add(id);
         }
 
-        System.out.println(diseaseIDList);
+       /* System.out.println(diseaseIDList);
 
         boolean hasName1 = symptomID.containsKey("Loose Stool");
         if (hasName1 = true) {
@@ -216,6 +207,61 @@ public class Main {
         }
 
 
+*/
+       for (String symptom : symptomList) {
+            symptom = symptom.toLowerCase();
+            if (symptomID.containsKey(symptom)) {
+                int id = symptomID.get(symptom);
+                System.out.println(id);
+                diseaseIDList.add(id);
+            }
+        }
+
+       int Diarrhea=0;
+       for (int id : diseaseIDList){
+           if(id == 1 ||  id==2|| id==3|| id==4|| id== 5){
+               Diarrhea++;
+           }
+       }
+       System.out.println("Diarrhea");
+       System.out.println(Diarrhea);
+
+
+        int Mononucleosis=0;
+        for (int id : diseaseIDList){
+            if(id == 5 ||  id==6|| id==7|| id==8|| id== 10| id== 11){
+                Mononucleosis++;
+            }
+        }
+        System.out.println("Mononucleosis");
+        System.out.println(Mononucleosis);
+
+        int Chickenpox=0;
+        for (int id : diseaseIDList){
+            if(id == 5 ||  id==6|| id==8|| id==9|| id== 10){
+                Chickenpox++;
+            }
+        }
+        System.out.println("Chickenpox");
+        System.out.println(Chickenpox);
+
+        int StrepThroat=0;
+        for (int id : diseaseIDList){
+            if(id == 2 ||  id==5|| id==7|| id==11|| id== 12){
+                StrepThroat++;
+            }
+        }
+        System.out.println("StrepThroat");
+        System.out.println(StrepThroat);
+
+        int Covid19=0;
+        for (int id : diseaseIDList){
+            if(id == 5 ||  id==6|| id==13|| id==14|| id== 15){
+                Covid19++;
+            }
+        }
+        System.out.println("Covid19");
+        System.out.println(Covid19);
 
 
     }
