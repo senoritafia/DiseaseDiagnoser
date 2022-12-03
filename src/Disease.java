@@ -1,40 +1,22 @@
-import java.util.List;
+import org.jetbrains.annotations.Nullable;
 
-public class Disease {
-    private String diseaseName;
-    private int diseaseID;
-    private List<Symptom> symptoms;
+import java.util.HashMap;
 
-    public Disease() {
+public record Disease(String name, int[] symptoms, int[] weights) {
+    public boolean hasSymptom(int id) {
+        for (int symptomId : symptoms) {
+            if (symptomId == id) return true;
+        }
+
+        return false;
     }
 
-    public Disease(String diseaseName, int diseaseID, List<Symptom> symptoms) {
-        this.diseaseName = diseaseName;
-        this.diseaseID = diseaseID;
-        this.symptoms = symptoms;
-    }
-
-    public String getDiseaseName() {
-        return diseaseName;
-    }
-
-    public int getDiseaseID() {
-        return diseaseID;
-    }
-
-    public List<Symptom> getSymptoms() {
-        return symptoms;
-    }
-
-    public void setDiseaseName(String diseaseName) {
-        this.diseaseName = diseaseName;
-    }
-
-    public void setDiseaseID(int diseaseID) {
-        this.diseaseID = diseaseID;
-    }
-
-    public void setSymptoms(List<Symptom> symptoms) {
-        this.symptoms = symptoms;
+    public int symptomWeight(int id) {
+        for (int i = 0; i < symptoms.length; i++) {
+            if (symptoms[i] == id) {
+                return weights[i];
+            }
+        }
+        return -1;
     }
 }

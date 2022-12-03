@@ -1,28 +1,28 @@
-public class Symptom {
-    private String symptomName;
-    private int symptomID;
+import org.jetbrains.annotations.Nullable;
 
-    public Symptom() {
+import java.util.HashMap;
+
+public record Symptom(String name, int id) {
+    private static final HashMap<Integer, Symptom> symptomList = new HashMap<>();
+
+    public Symptom(String name, int id) {
+        this.name = name;
+        this.id = id;
+
+        symptomList.put(id, this);
     }
 
-    public Symptom(String symptomName, int symptomID) {
-        this.symptomName = symptomName;
-        this.symptomID = symptomID;
+    public static Symptom getSymptom(int id) {
+        return symptomList.get(id);
     }
 
-    public String getSymptomName() {
-        return symptomName;
-    }
+    public static @Nullable Symptom getSymptom(String name) {
+        for (Symptom symptom : symptomList.values()) {
+            if (symptom.name.equals(name)) {
+                return symptom;
+            }
+        }
 
-    public int getSymptomID() {
-        return symptomID;
-    }
-
-    public void setSymptomName(String symptomName) {
-        this.symptomName = symptomName;
-    }
-
-    public void setSymptomID(int symptomID) {
-        this.symptomID = symptomID;
+        return null;
     }
 }
