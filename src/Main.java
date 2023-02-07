@@ -44,6 +44,7 @@ public class Main {
                 if (disease.hasSymptom(symptom.id())) {
                     System.out.printf("%s has symptom %s with weight %d\n", disease.name(), symptom.name(), disease.symptomWeight(symptom.id()));
                     total += disease.symptomWeight(symptom.id());
+
                 };
             }
 
