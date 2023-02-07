@@ -1,18 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class GUI implements ActionListener{
+public class WelcomePage implements ActionListener{
     int count=0;
     JLabel label;
     JFrame frame;
     JButton button;
-    public GUI() {
+    public WelcomePage() {
         frame=new JFrame();
 
         button=new JButton("Start");
         button.addActionListener(this);
 
-        //label=new JLabel("Number of clicks:0");
+        label=new JLabel("Number of clicks:0");
 
         JPanel panel =new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(30,30,10,30));
@@ -22,18 +22,18 @@ public class GUI implements ActionListener{
         panel.setBackground(Color.BLUE);
 
         frame.add(panel, BorderLayout.CENTER);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setTitle("Disease Diagnoser");
         frame.pack();
         frame.setVisible(true);
     }
     public static void main(String[]args){
-        new GUI();
+        new WelcomePage();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        count++;
-        label.setText("Number of clicks:" + count);
+        dispose();
+        DiagnosisPage secondFrame = new DiagnosisPage();
     }
 }
