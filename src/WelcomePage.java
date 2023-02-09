@@ -39,5 +39,6 @@ public class WelcomePage implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         frame.dispose();
         EnterSymptomsPage EnterSymptomsPage1 = new EnterSymptomsPage();
+
     }
 }

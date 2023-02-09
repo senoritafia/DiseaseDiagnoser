@@ -10,6 +10,10 @@ public class EnterSymptomsPage implements ActionListener {
     JButton button;
     JTextField textField;
 
+    JPanel panel;
+
+    // String symptoms="";
+
     public EnterSymptomsPage() {
         frame = new JFrame();
 
@@ -17,14 +21,20 @@ public class EnterSymptomsPage implements ActionListener {
         button.addActionListener(this);
         label = new JLabel("Please enter symptoms below. Remember that the more symptoms you give, the more accurate of a diagnosis the machine can give you. Please seperate symptoms with a comma");
         textField = new JTextField();
+        textField.addActionListener(this);
 
-        JPanel panel = new JPanel();
+
+        panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(300, 300, 100, 300));
         panel.setLayout(new GridLayout(0, 1));
         panel.add(button);
         panel.add(label);
         panel.add(textField);
+
         panel.setBackground(Color.RED);
+
+
+        // JLabel label1=new JLabel(symptoms);
 
 
         frame.add(panel, BorderLayout.CENTER);
@@ -35,16 +45,29 @@ public class EnterSymptomsPage implements ActionListener {
 
         //textField.setFont(times new roman);
 
-    }
 
-    public static void main(String[] args) {
+    }
+    public void theseAreSymptoms() {
+        String symptoms = textField.getText();
+        textField.selectAll();
+        //  frame.setTitle(symptoms);
+        label.setText(symptoms);
+    }
+   /* public static void main(String[] args) {
         new EnterSymptomsPage();
     }
-
+*/
     @Override
     public void actionPerformed(ActionEvent e) {
-        frame.dispose();
+
+        //okay so this means that it is getting the symptoms and assigning them to the var symptoms which is good.
+        // frame.dispose();
         DiagnosisPage DiagnosisPage1 = new DiagnosisPage();
+        theseAreSymptoms();
 
     }
-}
+
+
+    }
+
+

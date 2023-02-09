@@ -31,7 +31,6 @@ public class DiagnosisPage implements ActionListener {
         frame.setVisible(true);
 
 
-
     }
 
     public static void main(String[] args) {
@@ -40,7 +39,10 @@ public class DiagnosisPage implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        frame.dispose();
+        EnterSymptomsPage() whatever =  new EnterSymptomsPage();
+        whatever.theseAreSymptoms();
+ //trying to call the "theseAreSymptoms" method here
+        //  frame.dispose();
 
     }
 }
