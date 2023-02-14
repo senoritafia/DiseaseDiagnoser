@@ -38,18 +38,28 @@ public class Main {
         // create map of system ids to name
         Symptom[] patientSymptoms = Arrays.stream(symptomStringList).map(Symptom::getSymptom).filter(Objects::nonNull).toArray(Symptom[]::new);
 
+        int largestWeight = 0;
+        Disease largestDisease = null;
         for(Disease disease : diseaseList) {
             int total = 0;
             for (Symptom symptom : patientSymptoms) {
                 if (disease.hasSymptom(symptom.id())) {
-                    System.out.printf("%s has symptom %s with weight %d\n", disease.name(), symptom.name(), disease.symptomWeight(symptom.id()));
-                    total += disease.symptomWeight(symptom.id());
-
+                    int weight = disease.symptomWeight(symptom.id());
+                    System.out.printf("%s has symptom %s with weight %d\n", disease.name(), symptom.name(), weight);
+                    total += weight;
                 };
+            }
+
+            if (largestWeight < total) {
+                largestWeight = total;
+                largestDisease = disease;
             }
 
             System.out.printf("Total weight: %d\n", total);
         }
+
+        assert largestDisease != null;
+        System.out.printf("\nYou are most likely to have %s.\n", largestDisease.name());
 
 
     }

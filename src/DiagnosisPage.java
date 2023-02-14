@@ -39,8 +39,9 @@ public class DiagnosisPage implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        EnterSymptomsPage() whatever =  new EnterSymptomsPage();
+        EnterSymptomsPage whatever =  new EnterSymptomsPage();
         whatever.theseAreSymptoms();
+        
  //trying to call the "theseAreSymptoms" method here
         //  frame.dispose();
 
